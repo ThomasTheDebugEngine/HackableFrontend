@@ -44,7 +44,7 @@ function validateInput(paramArr){
 
 async function postData(data){
     //const newUrl = new URL("") 
-    const response = await fetch("http://localhost:2020",{
+    const response = await fetch("http://f3e107d8.ngrok.io/",{
         method: "POST",
         headers: {
             "content-type": "application/json"
