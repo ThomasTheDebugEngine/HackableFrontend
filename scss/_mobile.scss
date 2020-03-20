@@ -1,0 +1,42 @@
+@import "navbar";
+@import "homeSection";
+@import "aboutSection";
+@import "projectSection";
+@import "contactSection";
+
+@mixin mobile {
+    @media only screen and (max-width: 600px) {
+        @include mobileNavBar;
+        @include mobileHomeSection;
+        @include mobileAboutSection;
+        @include mobileProjectSection;
+        @include mobileContactSection;
+    }
+
+    //-------------------------------------------------------------------------
+    //burger button global configs
+    .burgerSvgDiv{
+        position: absolute;
+
+        z-index: 2;
+    
+        box-sizing: border-box;
+        top: 1px;
+        right: 10px;
+    
+        display: none;
+    }
+    
+    .svgStyle{
+        filter: invert(98%) sepia(1%) saturate(5052%) hue-rotate(261deg) brightness(126%) contrast(70%);
+    
+        opacity: 0.6;
+
+        z-index: 2;
+    
+        width: 65px;
+        height: 65px;
+    }
+    
+    //-------------------------------------------------------------------------
+}

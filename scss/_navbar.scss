@@ -1,0 +1,107 @@
+//-----------------------------------------------------------------------------
+
+@mixin navBar {
+    .navContainer{
+        position: fixed;
+        top: 0;
+
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+
+        width: 100%;
+        height: 64px;
+        background-color: rgba(43,43,43,0.85);
+    }
+
+    .flexFix{
+        position: relative; 
+        
+        width: 100px; 
+        height: 57px;
+
+        flex-grow: 0.9;        
+    }
+    
+    .navItems{
+        position: relative;
+        
+        right: 1rem;
+    }
+    
+    .navItems ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .navItems li{
+        position: relative;
+        display: inline-block;
+        margin-left: 3rem;
+        padding-top: 1rem;
+    }
+    
+    .navItems li a{
+        color: #b8b8b8;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    
+    .navItems li a:hover{
+        color: #dedede;
+    }
+    
+    .navItems ul li a::after{
+        position: absolute;
+        bottom: -23px;
+    
+        content: "";
+        display: block;
+    
+        height: 5px;
+        width: 0%;
+    
+        background-color: #008000;
+        transition: ease-in-out 250ms;
+    }
+    
+    .navItems ul li a:hover::after{
+        width: 100%;
+    }
+}
+
+//-----------------------------------------------------------------------------
+
+@mixin mobileNavBar{
+    #burgerSvgDiv{
+        display: block;
+    }
+
+    #navItems li{
+        position: relative;
+        display: block;
+    
+        margin-bottom: 4rem;
+    }
+
+    #navItems{
+        position: fixed;
+        
+        top: 20%;
+        right: -80px;
+    
+        width: 40px;
+    }
+    
+    #navItems li a {
+        color: #f2f2f2;
+    }
+
+    #navItems.active{
+        transition: ease-in-out 250ms;
+        right: 60%;
+    }
+}
+
+//-----------------------------------------------------------------------------

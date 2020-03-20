@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+.navBar{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(42, 42, 42);
+    opacity: 0.7;
+}
+
+.title{
+    margin: 0;
+    padding: 10px;
+}
+
+.title h1{
+    position: relative;
+    color: white;
+}
+
+.imageContainerDiv{
+    position: absolute;
+    z-index: -2;
+    
+    height: 100vh;
+    width: 100vw;
+
+    background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./tempImages/background-code.jpg");
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    opacity: 0.9;
+}
+
+.boxFlexDiv{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.skillBox{
+    position: relative;
+    display: inline-block;
+
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+
+    padding: 1rem;
+    width: 40vw;
+
+    border-radius: 10px;
+    
+    background-color: #949494;
+    background:rgba(148, 148, 148, 0.6);
+}
+
+.skillBox ul{
+    position: relative;
+    justify-content: center;
+    
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 11px;
+    
+    width: 100%;
+
+    padding-left: 0;  
+}
+
+.skillBox ul li{
+    position: relative;
+    list-style: none;
+    box-sizing: border-box;
+
+    height: 50px;
+}
+
+.skillBox ul li img{
+    object-fit: contain;
+
+    box-sizing: border-box;
+
+    flex-grow: 1;
+
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+.funFact{
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+
+    padding: 10px;
+
+    align-items: center;
+    justify-content: center;
+    
+    width: fit-content;
+    height: fit-content;
+
+    color: #949494;
+
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%,-50%);
+}
+
+.funFact h1 {
+    margin: 0;
+}
+
+.funFact h2 {
+    margin: 0;
+}

@@ -1,0 +1,114 @@
+//-----------------------------------------------------------------------------
+
+@mixin homeSection {
+    .homeSection{
+        position: relative;
+    
+        background: #404040; 
+        
+        width: 100%;
+        height: 100vh;
+    }
+
+    .greetingText{
+        position: absolute;
+        box-sizing: border-box;
+
+        width: 600px;
+        height: 200px;
+
+        top: 30%;
+        left: 4%;
+
+        padding-left: 0px;
+        padding-top: 10px;
+
+        & .line1{
+            position: relative;
+
+            margin: 0px 10px;
+            width: fit-content;
+
+            font-size: 35px;
+
+            color: #bfbfbf;
+        }
+
+        & .line2{
+            position: relative;
+
+            margin: 0px 10px;
+            width: fit-content;
+
+            font-size: 50px;
+
+            color: green;
+        }
+
+        & .line3{
+            position: relative;
+
+            margin: 0px 10px;
+            width: fit-content;
+
+            color: #bfbfbf;
+
+            font-size: 30px;
+        }
+
+        & .line4{
+            position: relative;
+
+            margin: 0px 10px;
+            width: fit-content;
+
+            margin-top: 20px;
+
+            color: green;
+
+            font-size: 25px;
+        }
+
+        &.active{
+            display: none;
+        }
+    }
+
+    .socialIcons{
+        display: flex;
+        position: relative;
+
+        top: 100%;
+
+        transform: translateY(-100%);
+        left: 50px;
+
+        width: 200px;
+        height: 80px;
+
+        //background: red;
+
+        & a{
+            margin-right: 40px;
+            color: cadetblue;
+            
+            & :hover{
+                transition: ease-in-out 500ms;
+                color: green;
+            }
+        }
+    }
+}
+
+//-----------------------------------------------------------------------------
+
+@mixin mobileHomeSection {
+    #greetingText{
+        width: 300px;
+
+        margin: 0;
+        padding: 0;
+
+        top: 20%;
+    }
+}
